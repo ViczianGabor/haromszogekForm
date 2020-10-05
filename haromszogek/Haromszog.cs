@@ -6,11 +6,11 @@ namespace haromszogek
 {
     internal class Haromszog
     {
-        private int aoldal;
-        private int boldal;
-        private int coldal;
+        private double aoldal;
+        private double boldal;
+        private double coldal;
 
-        public Haromszog(int aoldal, int boldal, int coldal)
+        public Haromszog(double aoldal, double boldal, double coldal)
         {
             this.aoldal = aoldal;
             this.boldal = boldal;
@@ -71,11 +71,11 @@ namespace haromszogek
         public List<string> adatokSzoveg()
         {
             List<string> adatok = new List<string>();
-            
-            
+
+            adatok.Add($"a: {aoldal} - b: {boldal} - c: {coldal}");
             if (szerkesztheto)
             {
-                adatok.Add($"a: {aoldal} - b: {boldal} - c: {coldal}");
+                adatok.Add($"Kerület: {kerulet:N2} - Terület: {terulet:N2}");
             }
             else
             {

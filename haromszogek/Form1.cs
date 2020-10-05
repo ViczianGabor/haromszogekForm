@@ -13,9 +13,9 @@ namespace haromszogek
     public partial class frmFo : Form
     {
 
-        private int Aoldal;
-        private int Boldal;
-        private int Coldal;
+        private double Aoldal;
+        private double Boldal;
+        private double Coldal;
 
         public frmFo()
         {
@@ -56,34 +56,33 @@ namespace haromszogek
 
         private void btnSzamol_Click(object sender, EventArgs e)
         {
-            Aoldal = int.Parse(tbAoldal.Text);
-            Boldal = int.Parse(tbBoldal.Text);
-            Coldal = int.Parse(tbColdal.Text);
+            try
+            {
+                Aoldal = Convert.ToDouble(tbAoldal.Text);
+                Boldal = Convert.ToDouble(tbBoldal.Text);
+                Coldal = Convert.ToDouble(tbColdal.Text);
 
 
-            if (Aoldal == 0 || Boldal == 0 || Coldal == 0)
-            {
-                MessageBox.Show("Ez nem lehet nulla", "Ez most", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                var h = new Haromszog(Aoldal, Boldal, Coldal);
-                if (h.szerkesztheto)
+                if (Aoldal == 0 || Boldal == 0 || Coldal == 0)
                 {
-                    MessageBox.Show("Kerület: " + h.kerulet + "Terület: " + h.terulet);
+                    MessageBox.Show("Ez nem lehet nulla", "Ez most", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Nem szerkeszthető belőle háromszög");
+                    var h = new Haromszog(Aoldal, Boldal, Coldal);
+                    List<string> adatok = h.adatokSzoveg();
+                    foreach (var a in adatok)
+                    {
+                        lbHaromsogLista.Items.Add(a);
+                    }
+
+
                 }
-
-
-                List<string> adatok = h.adatokSzoveg();
-                foreach (var a in adatok)
-                {
-                    lbHaromsogLista.Items.Add(a);
-                }
-
+            }
+            catch (Exception esc)
+            {
+                MessageBox.Show("Számot adj meg!","Hiba",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                tbAoldal.Focus();
 
             }
 

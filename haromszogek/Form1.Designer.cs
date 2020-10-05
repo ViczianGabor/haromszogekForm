@@ -37,9 +37,9 @@
             this.tbColdal = new System.Windows.Forms.TextBox();
             this.btnKilepes = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSzamol = new System.Windows.Forms.Button();
             this.lbHaromsogLista = new System.Windows.Forms.ListBox();
             this.btnTorol = new System.Windows.Forms.Button();
-            this.btnSzamol = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,13 +126,24 @@
             this.panel1.Size = new System.Drawing.Size(358, 198);
             this.panel1.TabIndex = 9;
             // 
+            // btnSzamol
+            // 
+            this.btnSzamol.Location = new System.Drawing.Point(248, 91);
+            this.btnSzamol.Name = "btnSzamol";
+            this.btnSzamol.Size = new System.Drawing.Size(101, 36);
+            this.btnSzamol.TabIndex = 8;
+            this.btnSzamol.Text = "Számolás";
+            this.btnSzamol.UseVisualStyleBackColor = true;
+            this.btnSzamol.Click += new System.EventHandler(this.btnSzamol_Click);
+            // 
             // lbHaromsogLista
             // 
+            this.lbHaromsogLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbHaromsogLista.FormattingEnabled = true;
-            this.lbHaromsogLista.ItemHeight = 24;
+            this.lbHaromsogLista.ItemHeight = 16;
             this.lbHaromsogLista.Location = new System.Drawing.Point(444, 100);
             this.lbHaromsogLista.Name = "lbHaromsogLista";
-            this.lbHaromsogLista.Size = new System.Drawing.Size(210, 220);
+            this.lbHaromsogLista.Size = new System.Drawing.Size(210, 212);
             this.lbHaromsogLista.TabIndex = 10;
             // 
             // btnTorol
@@ -144,16 +155,6 @@
             this.btnTorol.Text = "Törlés";
             this.btnTorol.UseVisualStyleBackColor = true;
             this.btnTorol.Click += new System.EventHandler(this.btnTorol_Click);
-            // 
-            // btnSzamol
-            // 
-            this.btnSzamol.Location = new System.Drawing.Point(248, 91);
-            this.btnSzamol.Name = "btnSzamol";
-            this.btnSzamol.Size = new System.Drawing.Size(101, 36);
-            this.btnSzamol.TabIndex = 8;
-            this.btnSzamol.Text = "Számolás";
-            this.btnSzamol.UseVisualStyleBackColor = true;
-            this.btnSzamol.Click += new System.EventHandler(this.btnSzamol_Click);
             // 
             // frmFo
             // 
