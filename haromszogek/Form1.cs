@@ -87,5 +87,11 @@ namespace haromszogek
             }
 
         }
+
+        private void btnfajlbol_Click(object sender, EventArgs e)
+        {
+            lbHaromsogLista.Items.Clear();
+            ofdMegnyitas.ShowDialog();
+        }
     }
 }

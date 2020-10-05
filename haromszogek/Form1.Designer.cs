@@ -40,6 +40,8 @@
             this.btnSzamol = new System.Windows.Forms.Button();
             this.lbHaromsogLista = new System.Windows.Forms.ListBox();
             this.btnTorol = new System.Windows.Forms.Button();
+            this.btnfajlbol = new System.Windows.Forms.Button();
+            this.ofdMegnyitas = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +104,7 @@
             // 
             // btnKilepes
             // 
-            this.btnKilepes.Location = new System.Drawing.Point(290, 222);
+            this.btnKilepes.Location = new System.Drawing.Point(281, 323);
             this.btnKilepes.Name = "btnKilepes";
             this.btnKilepes.Size = new System.Drawing.Size(82, 36);
             this.btnKilepes.TabIndex = 7;
@@ -156,11 +158,27 @@
             this.btnTorol.UseVisualStyleBackColor = true;
             this.btnTorol.Click += new System.EventHandler(this.btnTorol_Click);
             // 
+            // btnfajlbol
+            // 
+            this.btnfajlbol.Location = new System.Drawing.Point(262, 228);
+            this.btnfajlbol.Name = "btnfajlbol";
+            this.btnfajlbol.Size = new System.Drawing.Size(92, 36);
+            this.btnfajlbol.TabIndex = 12;
+            this.btnfajlbol.Text = "Fájlból";
+            this.btnfajlbol.UseVisualStyleBackColor = true;
+            this.btnfajlbol.Click += new System.EventHandler(this.btnfajlbol_Click);
+            // 
+            // ofdMegnyitas
+            // 
+            this.ofdMegnyitas.Filter = "Text Files| *.txt";
+            this.ofdMegnyitas.InitialDirectory = "C:\\Users\\nyb15VICZIÁNG\\source\\repos\\haromszogek\\haromszogek\\bin\\Debug";
+            // 
             // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 390);
+            this.Controls.Add(this.btnfajlbol);
             this.Controls.Add(this.btnTorol);
             this.Controls.Add(this.lbHaromsogLista);
             this.Controls.Add(this.panel1);
@@ -191,6 +209,8 @@
         private System.Windows.Forms.ListBox lbHaromsogLista;
         private System.Windows.Forms.Button btnTorol;
         private System.Windows.Forms.Button btnSzamol;
+        private System.Windows.Forms.Button btnfajlbol;
+        private System.Windows.Forms.SaveFileDialog ofdMegnyitas;
     }
 }
 
